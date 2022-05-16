@@ -7,8 +7,8 @@ const activitySchema = mongoose.Schema({
     neighborhood: String,
     address: String,
     location: String,
-    zip: Number,
-    cost: String,
+    zip: String,
+    cost: Number,
     time: String
 }, {
     timestamps: true
