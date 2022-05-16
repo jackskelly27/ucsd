@@ -13,10 +13,10 @@ const getActivities = asyncHandler(async (req, res) => {
 // @desc Create Activity
 // @route POST /api/activities
 const createActivity = asyncHandler(async (req, res) => {
-    // if (!req.body.name) {
-    //     res.status(400);
-    //     throw new Error("Please add a text field.");
-    // }
+    if (!req.body.name) {
+        res.status(400);
+        throw new Error("Please add a text field.");
+    }
 
     const activity = await Activity.create({
         name: req.body.name,
@@ -39,13 +39,31 @@ const createActivity = asyncHandler(async (req, res) => {
 // @desc Update Activity
 // @route PUT /api/activities/:id
 const updateActivity = asyncHandler(async (req, res) => {
-    res.status(200).json({message: `Change Activity ${req.params.id}`});
+    const activity = await Activity.findById(req.params.id)
+
+    if (!activity) {
+        res.status(400);
+        throw new Error("Activity not found");
+    };
+
+    const updatedActivity = await Activity.findByIdAndUpdate(req.params.id, req.body, {new: true});
+
+    res.status(200).json(updatedActivity);
 });
 
 // @desc Delete Activity
 // @route DELETE /api/activities/:id
 const deleteActivity = asyncHandler(async (req, res) => {
-    res.status(200).json({message: `Delete Activity ${req.params.id}`});
+    const activity = await Activity.findById(req.params.id)
+
+    if (!activity) {
+        res.status(400);
+        throw new Error("Activity not found");
+    };
+
+    await activity.remove();
+
+    res.status(200).json({id: req.params.id});
 });
 
 module.exports = {
