@@ -15,12 +15,15 @@ function ActivityPage() {
     if (isError) {
       console.log(message)
     }
+    dispatch(getActivities())
+    
 
-    dispatch(getActivities({ neighborhood: 'fun neighborhood'}))
+    if(!isError) {
 
-    return () => {
       dispatch(reset())
+
     }
+
   }, [isError, message, dispatch])
 
   if (isLoading) {
@@ -33,18 +36,23 @@ function ActivityPage() {
       <section>
       {activities.length > 0 ? (
         <table>
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Neighborhood</th>
-            <th>Address</th>
-            <th>Cost</th>
-          </tr>
-              {activities.map((activity) => (
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Neighborhood</th>
+              <th>Address</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            {activities.map((activity) => (
                 <ActivityItem key={activity._id} activity={activity} />
               ))}
-            </table>
+          </tbody>
+
+        </table>
           ) : (
             <h3>You have not set any goals</h3>
       )}

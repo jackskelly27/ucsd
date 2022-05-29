@@ -5,10 +5,6 @@ const Activity = require("../models/activityModel");
 // @desc Get Activities
 // @route GET /api/activities
 const getActivities = asyncHandler(async (req, res) => {
-    const searchParams = {};
-
-    const { neighborhood } = req.query;
-    console.log(req.query);
 
     const activities = await Activity.find(req.query);
 
