@@ -6,7 +6,7 @@ const Activity = require("../models/activityModel");
 // @route GET /api/activities
 const getActivities = asyncHandler(async (req, res) => {
 
-    const activities = await Activity.find();
+    const activities = await Activity.find(req.query);
 
     res.status(200).json(activities);
 });

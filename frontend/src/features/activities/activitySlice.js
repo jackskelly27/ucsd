@@ -12,9 +12,9 @@ const initialState = {
 // Get user activities
 export const getActivities = createAsyncThunk(
   'activities/getAll',
-  async (_, thunkAPI) => {
+  async (queryParams, thunkAPI) => {
     try {
-      return await activityService.getActivities()
+      return await activityService.getActivities(queryParams)
     } catch (error) {
       const message =
         (error.response &&
