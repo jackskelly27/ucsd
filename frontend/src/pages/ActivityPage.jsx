@@ -16,7 +16,7 @@ function ActivityPage() {
       console.log(message)
     }
 
-    dispatch(getActivities())
+    dispatch(getActivities({ neighborhood: 'fun neighborhood'}))
 
     return () => {
       dispatch(reset())
@@ -30,7 +30,6 @@ function ActivityPage() {
   return (
     <>
       <section className='heading'><h1>Activities!</h1></section>
-
       <section>
       {activities.length > 0 ? (
         <table>

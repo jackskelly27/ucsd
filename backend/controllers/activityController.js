@@ -5,8 +5,12 @@ const Activity = require("../models/activityModel");
 // @desc Get Activities
 // @route GET /api/activities
 const getActivities = asyncHandler(async (req, res) => {
+    const searchParams = {};
 
-    const activities = await Activity.find();
+    const { neighborhood } = req.query;
+    console.log(req.query);
+
+    const activities = await Activity.find(req.query);
 
     res.status(200).json(activities);
 });
