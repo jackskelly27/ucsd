@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Frontpage from './pages/Frontpage'
+import ActivityPage from './pages/ActivityPage'
 import Header from './components/Header'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <div className='container'>
           <Header />
           <Routes>
-            <Route path='/' element={<Frontpage />} />
+            <Route path='/' element={<ActivityPage />} />
           </Routes>
         </div>
       </Router>

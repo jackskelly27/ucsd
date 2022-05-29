@@ -2,12 +2,14 @@ import React from 'react'
 
 function ActivityItem({activity}) {
   return (
-    <div className='goal'>
-        <div>
-            {new Date(activity.createdAt).toLocaleString('en-us')}
-        </div>
-        <h2>{activity.name}</h2>
-    </div>
+    <tr>
+      <td>{activity.name}</td>
+      <td>{activity.type}</td>
+      <td>{activity.description}</td>
+      <td>{activity.neighborhood}</td>
+      <td>{activity.address}</td>
+      <td>{activity.cost}</td>
+    </tr>
   )
 }
 

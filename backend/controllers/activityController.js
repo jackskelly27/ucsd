@@ -5,6 +5,7 @@ const Activity = require("../models/activityModel");
 // @desc Get Activities
 // @route GET /api/activities
 const getActivities = asyncHandler(async (req, res) => {
+
     const activities = await Activity.find();
 
     res.status(200).json(activities);
