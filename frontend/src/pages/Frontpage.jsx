@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import '../App.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
 import { getActivities, reset } from '../features/activities/activitySlice'
 import ActivityItem from '../components/ActivityItem'
 
 function Frontpage() {
-  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const { activities, isLoading, isError, message } = useSelector(
@@ -23,7 +21,7 @@ function Frontpage() {
     return () => {
       dispatch(reset())
     }
-  }, [navigate, isError, message, dispatch])
+  }, [isError, message, dispatch])
 
   if (isLoading) {
     return (<><h5>Loading...</h5></>);
