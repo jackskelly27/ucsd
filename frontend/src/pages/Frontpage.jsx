@@ -1,11 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../App.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { getActivities, reset } from '../features/activities/activitySlice'
+import ActivityItem from '../components/ActivityItem'
 
 function Frontpage() {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  const { activities, isLoading, isError, message } = useSelector(
+    (state) => state.activities
+  )
+
+  useEffect(() => {
+    if (isError) {
+      console.log(message)
+    }
+
+    dispatch(getActivities())
+
+    return () => {
+      dispatch(reset())
+    }
+  }, [navigate, isError, message, dispatch])
+
+  if (isLoading) {
+    return (<><h5>Loading...</h5></>);
+  }
 
   return (
-    <div>
-      <table>
+    <>
+      {/* <table>
         <tr>
           <th>Name</th>
           <th>Type</th>
@@ -22,8 +48,24 @@ function Frontpage() {
           <td>Test5</td>
           <td>Test6</td>
         </tr>
-      </table>
-    </div>
+      </table> */}
+    <section className='heading'><h1>Activities!</h1></section>
+
+    <section className="content">
+    {activities.length > 0 ? (
+          <div className='goals'>
+            {activities.map((activity) => (
+              <ActivityItem key={activity._id} activity={activity} />
+            ))}
+          </div>
+        ) : (
+          <h3>You have not set any goals</h3>
+    )}
+    </section>
+
+
+
+    </>
   )
 }
 
