@@ -41,7 +41,7 @@ export const resourceSlice = createSlice({
       .addCase(getResources.fulfilled, (state, action) => {
         state.isLoading = false
         state.isSuccess = true
-        state.activities = action.payload
+        state.resources = action.payload
       })
       .addCase(getResources.rejected, (state, action) => {
         state.isLoading = false
