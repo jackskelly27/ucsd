@@ -1,5 +1,5 @@
 export const config = {
   api: {
-    url: 'http://localhost:4001'
+    url: 'http://localhost:5000'
   }
 }
