@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { getActivities, reset } from '../features/activities/activitySlice'
@@ -10,6 +11,14 @@ function ActivityPage() {
   const { activities, isLoading, isError, message } = useSelector(
     (state) => state.activities
   )
+  
+  function filterNeighborhood() {
+    dispatch(getActivities({ neighborhood: 'Little Italy'}))
+  }
+
+  function resetNeighborhood() {
+    dispatch(getActivities())
+  }
 
   useEffect(() => {
     if (isError) {
@@ -33,6 +42,9 @@ function ActivityPage() {
   return (
     <>
       <section className='heading'><h1>Activities!</h1></section>
+      <button className='btn' onClick={filterNeighborhood}>Filter By Little Italy Neighborhood</button>
+      <button className='btn' onClick={resetNeighborhood}>Reset Neighborhood</button>
+
       <section>
       {activities.length > 0 ? (
         <table>
