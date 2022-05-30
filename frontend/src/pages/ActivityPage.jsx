@@ -42,8 +42,8 @@ function ActivityPage() {
   return (
     <>
       <section className='heading'><h1>Activities!</h1></section>
-      <button className='btn btn-left' onClick={filterNeighborhood}>Filter By Little Italy Neighborhood</button>
-      <button className='btn btn-right' onClick={resetNeighborhood}>Reset Neighborhood</button>
+      <button className='btn' onClick={filterNeighborhood}>Filter By Little Italy Neighborhood</button>
+      <button className='btn' onClick={resetNeighborhood}>Reset Neighborhood</button>
 
       <section>
       {activities.length > 0 ? (
