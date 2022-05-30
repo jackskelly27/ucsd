@@ -150,13 +150,6 @@ h3 {
   align-items: center;
   justify-content: center;
 }
-.btn.btn-left {
-  align-items: left;
-}
-
-.btn.btn-right {
-  align-items: right;
-}
 
 .btn svg {
   margin-right: 8px;
