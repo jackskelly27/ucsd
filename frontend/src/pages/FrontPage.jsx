@@ -5,7 +5,8 @@ import '../App.css'
 function FrontPage() {
   return (
     <div class="container">
-      <Link to="/activities" className="btn">Activities</Link>
+      <Link to="/activities" className="btn link">Activities</Link>
+      <Link to="/resources" className="btn link">Digital Resources</Link>
     </div>
   )
 }

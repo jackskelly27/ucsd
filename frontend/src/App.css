@@ -50,4 +50,8 @@ h1 {
 .jc-center {
     justify-content: center;
 }
+
+.link {
+    padding: 20px;
+}
     

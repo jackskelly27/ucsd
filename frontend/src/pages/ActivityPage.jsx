@@ -71,7 +71,7 @@ function ActivityPage() {
 
         </table>
           ) : (
-            <h3>You have not set any goals</h3>
+            <h3>You have no activities.</h3>
       )}
       </section>
     </>
