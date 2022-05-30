@@ -4,9 +4,9 @@ import '../App.css'
 
 function FrontPage() {
   return (
-    <>
+    <div class="container">
       <Link to="/activities" className="btn">Activities</Link>
-    </>
+    </div>
   )
 }
 
