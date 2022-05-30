@@ -6,7 +6,7 @@ const Resource = require("../models/resourceModel");
 // @route GET /api/resources
 const getResources = asyncHandler(async (req, res) => {
 
-    const resources = await Resources.find(req.query);
+    const resources = await Resource.find(req.query);
 
     res.status(200).json(resources);
 });
@@ -20,7 +20,7 @@ const createResource = asyncHandler(async (req, res) => {
     }
 
     const resource = await Resource.create({
-        channel: req.body.name,
+        channel: req.body.channel,
         type: req.body.type,
         cost: req.body.cost,
         time: req.body.time,
@@ -49,7 +49,7 @@ const updateResource = asyncHandler(async (req, res) => {
 });
 
 // @desc Delete Resource
-// @route DELETE /api/activities/:id
+// @route DELETE /api/resources/:id
 const deleteResource = asyncHandler(async (req, res) => {
     const resource = await Resource.findById(req.params.id)
 
