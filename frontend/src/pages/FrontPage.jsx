@@ -7,6 +7,7 @@ function FrontPage() {
     <div class="container">
       <Link to="/activities" className="btn link">Activities</Link>
       <Link to="/resources" className="btn link">Digital Resources</Link>
+      <Link to="/gyms" className="btn link">Gyms</Link>
     </div>
   )
 }
