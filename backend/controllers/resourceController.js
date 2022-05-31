@@ -18,7 +18,7 @@ const createResource = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error("Please add a text field.");
     }
-
+    
     const resource = await Resource.create({
         channel: req.body.channel,
         type: req.body.type,

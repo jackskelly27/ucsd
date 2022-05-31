@@ -1,5 +1,5 @@
 export const config = {
   api: {
-    url: 'http://localhost:5000'
+    url: process.env.REACT_APP_API_URL
   }
 }

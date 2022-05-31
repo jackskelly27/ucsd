@@ -43,7 +43,7 @@ function GymPage() {
 
   return (
     <>
-      <section className='heading'><h1>Get Gyms!</h1></section>
+      <section className='heading'><h1>Gyms!</h1></section>
       <div class="flex-parent jc-center">
         <button className='btn' onClick={filterGym}>Filter By YMCA</button>
         <button className='btn' onClick={resetGym}>Reset Gym</button>
