@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:frontend": "gh-pages -d build"
+    "deploy:frontend": "REACT_APP_FRONT_APP_URL=https://ucsd-backend.herokuapp.com gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
