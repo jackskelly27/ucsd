@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "homepage": "http://jackskelly27.github.io/ucsd",
+  "homepage": "https://6296b3d27ae1a836ac2bc6df--astonishing-tartufo-96c2ef.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,8 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy:frontend": "REACT_APP_FRONT_APP_URL=https://ucsd-backend.herokuapp.com gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
