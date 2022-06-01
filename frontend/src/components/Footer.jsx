@@ -1,10 +1,12 @@
 import React from 'react'
 import '../App.css'
 
+const today = new Date();
+
 function Footer() {
   return (
     <div className="footer">
-      <h5>Matthew Kelly, UCSD Copyright 2022</h5>
+      <h6>Matthew Kelly, UCSD Copyright {today.getFullYear()}</h6>
     </div>
   )
 }
