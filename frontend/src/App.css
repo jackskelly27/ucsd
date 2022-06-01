@@ -1,6 +1,7 @@
 html {
     background-color: lightskyblue;
     color: black;
+    font-family: Verdana
 }
 
 .App {
@@ -54,4 +55,16 @@ h1 {
 .link {
     padding: 20px;
 }
-    
+
+.footer {
+    position: absolute;
+    text-align: center;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.k5 {
+    padding-top: 40px;
+    font-weight: 600;
+}

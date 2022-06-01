@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import ActivityPage from './pages/ActivityPage'
 import FrontPage from './pages/FrontPage'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import ResourcePage from './pages/ResourcePage'
 import GymPage from './pages/GymPage'
 
@@ -19,6 +20,7 @@ function App() {
             <Route path='/resources' element={<ResourcePage />} />
             <Route path='/gyms' element={<GymPage />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </>

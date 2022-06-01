@@ -5,7 +5,7 @@ import '../App.css'
 function FrontPage() {
   return (
     <>
-    <p>This is a paragraph.</p>
+    <p className="container2 k5">This will be a paragraph, etc. with a description, etc.</p>
     <div class="container">
       <Link to="/activities" className="btn link">Activities</Link>
       <Link to="/resources" className="btn link">Digital Resources</Link>
