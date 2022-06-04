@@ -13,6 +13,7 @@ function GymPage() {
   const query = useQuery();
 
   const gym = query.get('gym');
+  const neighborhood = query.get('neighborhood');
 
   const { gyms, isLoading, isError, message } = useSelector(
     (state) => state.gyms
@@ -23,10 +24,14 @@ function GymPage() {
       console.log(message)
     }
     
-    if (!gym) {
+    if (!gym && !neighborhood) {
       dispatch(getGyms());
-    } else {
+    } else if (!gym && neighborhood) {
+      dispatch(getGyms({neighborhood}));
+    } else if (gym && !neighborhood) {
       dispatch(getGyms({gym}));
+    } else {
+      dispatch(getGyms({neighborhood, gym}));
     }
     
 
@@ -44,7 +49,7 @@ function GymPage() {
 
   return (
     <>
-      <section className='heading'><h1>{gym ? gym : "All"} Gyms!</h1></section>
+      <section className='heading'><h1>{gym ? gym : "All"} {neighborhood} Gyms!</h1></section>
       <div class="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
