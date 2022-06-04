@@ -4,11 +4,15 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getActivities, reset } from '../features/activities/activitySlice'
 import ActivityItem from '../components/ActivityItem'
 import {useNavigate} from 'react-router-dom'
+import {useQuery} from '../utils'
 
 function ActivityPage() {
 
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const query = useQuery();
+
+  const neighborhood = query.get('neighborhood');
 
   const { activities, isLoading, isError, message } = useSelector(
     (state) => state.activities
@@ -26,8 +30,12 @@ function ActivityPage() {
     if (isError) {
       console.log(message)
     }
-    dispatch(getActivities())
     
+    if (!neighborhood) {
+      dispatch(getActivities());
+    } else {
+      dispatch(getActivities({neighborhood}));
+    }
 
     if(!isError) {
 
@@ -44,13 +52,13 @@ function ActivityPage() {
   return (
     <>
       <section className='heading'><h1>Activities!</h1></section>
-      <div class="flex-parent jc-center">
+      <div className="flex-parent jc-center">
         <button className='btn' onClick={filterNeighborhood}>Filter By Little Italy Neighborhood</button>
         <button className='btn' onClick={resetNeighborhood}>Reset Neighborhood</button>
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
 
-      <section class="container2">
+      <section className="container2">
       {activities.length > 0 ? (
         <table>
           <thead>
