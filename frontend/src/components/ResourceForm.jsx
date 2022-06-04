@@ -2,6 +2,7 @@ import React from 'react'
 import {useForm} from 'react-hook-form'
 import {useNavigate} from 'react-router-dom'
 
+// fix deploy, remove soon
 function ResourceForm() {
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
