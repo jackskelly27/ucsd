@@ -4,29 +4,30 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getGyms, reset } from '../features/gyms/gymSlice'
 import GymItem from '../components/GymItem'
 import {useNavigate} from 'react-router-dom'
+import {useQuery} from '../utils'
 
 function GymPage() {
 
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const query = useQuery();
+
+  const gym = query.get('gym');
 
   const { gyms, isLoading, isError, message } = useSelector(
     (state) => state.gyms
   )
   
-  function filterGym() {
-    dispatch(getGyms({ gym: 'YMCA'}))
-  }
-
-  function resetGym() {
-    dispatch(getGyms())
-  }
-
   useEffect(() => {
     if (isError) {
       console.log(message)
     }
-    dispatch(getGyms())
+    
+    if (!gym) {
+      dispatch(getGyms());
+    } else {
+      dispatch(getGyms({gym}));
+    }
     
 
     if(!isError) {
@@ -43,10 +44,8 @@ function GymPage() {
 
   return (
     <>
-      <section className='heading'><h1>Gyms!</h1></section>
+      <section className='heading'><h1>{gym ? gym : "All"} Gyms!</h1></section>
       <div class="flex-parent jc-center">
-        <button className='btn' onClick={filterGym}>Filter By YMCA</button>
-        <button className='btn' onClick={resetGym}>Reset Gym</button>
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
 

@@ -18,14 +18,6 @@ function ActivityPage() {
     (state) => state.activities
   )
   
-  function filterNeighborhood() {
-    dispatch(getActivities({ neighborhood: 'Little Italy'}))
-  }
-
-  function resetNeighborhood() {
-    dispatch(getActivities())
-  }
-
   useEffect(() => {
     if (isError) {
       console.log(message)
@@ -51,10 +43,8 @@ function ActivityPage() {
 
   return (
     <>
-      <section className='heading'><h1>Activities!</h1></section>
+      <section className='heading'><h1>{neighborhood ? neighborhood : "All"} Activities!</h1></section>
       <div className="flex-parent jc-center">
-        <button className='btn' onClick={filterNeighborhood}>Filter By Little Italy Neighborhood</button>
-        <button className='btn' onClick={resetNeighborhood}>Reset Neighborhood</button>
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
 

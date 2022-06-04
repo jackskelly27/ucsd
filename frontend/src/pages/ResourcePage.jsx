@@ -4,29 +4,30 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getResources, reset } from '../features/resources/resourceSlice'
 import ResourceItem from '../components/ResourceItem'
 import {useNavigate} from 'react-router-dom'
+import {useQuery} from '../utils'
 
 function ResourcePage() {
 
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const query = useQuery();
+
+  const type = query.get('type');
 
   const { resources, isLoading, isError, message } = useSelector(
     (state) => state.resources
   )
   
-  function filterType() {
-    dispatch(getResources({ type: 'YouTube Channel'}))
-  }
-
-  function resetType() {
-    dispatch(getResources())
-  }
-
   useEffect(() => {
     if (isError) {
       console.log(message)
     }
-    dispatch(getResources())
+    
+    if (!type) {
+      dispatch(getResources());
+    } else {
+      dispatch(getResources({type}));
+    }
     
 
     if(!isError) {
@@ -43,10 +44,8 @@ function ResourcePage() {
 
   return (
     <>
-      <section className='heading'><h1>Digital Resources!</h1></section>
+      <section className='heading'><h1>{type ? type : "All"} Digital Resources!</h1></section>
       <div class="flex-parent jc-center">
-        <button className='btn' onClick={filterType}>Filter By YouTube Channel</button>
-        <button className='btn' onClick={resetType}>Reset Type</button>
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
 
