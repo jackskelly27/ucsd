@@ -61,7 +61,8 @@ h1 {
 }
 
 .footer {
-    position: relative;
+    margin-top: 50px;
+    position:static;
     text-align: center;
     left:0;
     bottom:0;

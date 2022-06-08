@@ -6,7 +6,7 @@ const today = new Date();
 function Footer() {
   return (
     <div className="footer">
-      <h5>UCSD &copy; {today.getFullYear()}</h5>
+      <h5>UC San Diego Health &copy; {today.getFullYear()}</h5>
     </div>
   )
 }
