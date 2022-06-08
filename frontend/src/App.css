@@ -93,3 +93,19 @@ form {
 .submit-btn {
     display: block;
 }
+
+.img-left {
+    float: left;
+    height: 100px;
+}
+
+.img-right {
+    float: right;
+    height: 100px;
+}
+
+.header {
+    vertical-align: center;
+    text-align: center;
+    height: 120px;
+}
