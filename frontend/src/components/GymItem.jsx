@@ -7,8 +7,9 @@ function GymItem({gym}) {
       <td>{gym.name}</td>
       <td>{gym.address}</td>
       <td>{gym.zip}</td>
-      <td>{gym.neighborhood}</td>
+      <td>{gym.region}</td>
       <td>{gym.phone}</td>
+      <td>{gym.site}</td>
     </tr>
     )
   }

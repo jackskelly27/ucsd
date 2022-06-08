@@ -23,12 +23,16 @@ const createActivity = asyncHandler(async (req, res) => {
         name: req.body.name,
         type: req.body.type,
         description: req.body.description,
-        neighborhood: req.body.neighborhood,
-        address: req.body.address,
         location: req.body.location,
         zip: req.body.zip,
+        region: req.body.region,
         cost: req.body.cost,
-        time: req.body.time
+        when: req.body.when,
+        phone: req.body.phone,
+        site: req.body.site,
+        email: req.body.email,
+        scheduled: req.body.scheduled,
+        setting: req.body.scheduled
     });
 
     console.log(activity);

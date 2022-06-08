@@ -12,7 +12,7 @@ function ActivityPage() {
   const dispatch = useDispatch();
   const query = useQuery();
 
-  const neighborhood = query.get('neighborhood');
+  const region = query.get('region');
 
   const { activities, isLoading, isError, message } = useSelector(
     (state) => state.activities
@@ -23,10 +23,10 @@ function ActivityPage() {
       console.log(message)
     }
     
-    if (!neighborhood) {
+    if (!region) {
       dispatch(getActivities());
     } else {
-      dispatch(getActivities({neighborhood}));
+      dispatch(getActivities({region}));
     }
 
     if(!isError) {
@@ -43,7 +43,7 @@ function ActivityPage() {
 
   return (
     <>
-      <section className='heading'><h1>{neighborhood ? neighborhood : "All"} Activities!</h1></section>
+      <section className='heading'><h1>{region ? region : "All"} Activities!</h1></section>
       <div className="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
@@ -56,9 +56,16 @@ function ActivityPage() {
               <th>Name</th>
               <th>Type</th>
               <th>Description</th>
-              <th>Neighborhood</th>
-              <th>Address</th>
+              <th>Location</th>
+              <th>Zip</th>
+              <th>Region</th>
               <th>Cost</th>
+              <th>When</th>
+              <th>Phone</th>
+              <th>Site</th>
+              <th>Email</th>
+              <th>Scheduled</th>
+              <th>Setting</th>
             </tr>
           </thead>
           <tbody>

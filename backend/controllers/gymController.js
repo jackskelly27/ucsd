@@ -24,8 +24,9 @@ const createGym = asyncHandler(async (req, res) => {
         name: req.body.name,
         address: req.body.address,
         zip: req.body.zip,
-        neighborhood: req.body.neighborhood,
+        region: req.body.region,
         phone: req.body.phone,
+        site: req.body.site
     });
 
     console.log(gym);

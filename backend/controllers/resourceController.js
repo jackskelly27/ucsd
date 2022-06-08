@@ -24,7 +24,8 @@ const createResource = asyncHandler(async (req, res) => {
         type: req.body.type,
         cost: req.body.cost,
         time: req.body.time,
-        notes: req.body.notes
+        notes: req.body.notes,
+        costNote: req.body.costNote
     });
 
     console.log(resource);

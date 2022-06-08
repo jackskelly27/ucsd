@@ -6,9 +6,16 @@ function ActivityItem({activity}) {
       <td>{activity.name}</td>
       <td>{activity.type}</td>
       <td>{activity.description}</td>
-      <td>{activity.neighborhood}</td>
-      <td>{activity.address}</td>
+      <td>{activity.location}</td>
+      <td>{activity.zip}</td>
+      <td>{activity.region}</td>
       <td>{activity.cost}</td>
+      <td>{activity.when}</td>
+      <td>{activity.phone}</td>
+      <td>{activity.site}</td>
+      <td>{activity.email}</td>
+      <td>{activity.scheduled}</td>
+      <td>{activity.setting}</td>
     </tr>
   )
 }

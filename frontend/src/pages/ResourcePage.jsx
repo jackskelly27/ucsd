@@ -13,6 +13,7 @@ function ResourcePage() {
   const query = useQuery();
 
   const type = query.get('type');
+  const costNote = query.get('costNote');
 
   const { resources, isLoading, isError, message } = useSelector(
     (state) => state.resources
@@ -22,14 +23,17 @@ function ResourcePage() {
     if (isError) {
       console.log(message)
     }
-    
-    if (!type) {
+
+    if (!type && !costNote) {
       dispatch(getResources());
-    } else {
+    } else if (!type && costNote) {
+      dispatch(getResources({costNote}));
+    } else if (type && !costNote) {
       dispatch(getResources({type}));
+    } else {
+      dispatch(getResources({type, costNote}));
     }
     
-
     if(!isError) {
 
       dispatch(reset())
@@ -44,7 +48,7 @@ function ResourcePage() {
 
   return (
     <>
-      <section className='heading'><h1>{type ? type : "All"} Digital Resources!</h1></section>
+      <section className='heading'><h1>{type ? type : "All"} {costNote} Digital Resources!</h1></section>
       <div class="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>

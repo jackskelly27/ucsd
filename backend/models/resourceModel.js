@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 const resourceSchema = mongoose.Schema({
     channel: String,
     type: String,
-    cost: Number,
+    cost: String,
     time: String,
-    notes: String
+    notes: String,
+    costNote: String
 }, {
     timestamps: true
 });

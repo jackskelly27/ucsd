@@ -5,8 +5,9 @@ const gymSchema = mongoose.Schema({
     name: String,
     address: String,
     zip: String,
-    neighborhood: String,
-    phone: String
+    region: String,
+    phone: String,
+    site: String
 }, {
     timestamps: true
 });

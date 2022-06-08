@@ -4,12 +4,16 @@ const activitySchema = mongoose.Schema({
     name: String,
     type: String,
     description: String,
-    neighborhood: String,
-    address: String,
     location: String,
     zip: String,
-    cost: Number,
-    time: String
+    region: String,
+    cost: String,
+    when: String,
+    phone: String,
+    site: String,
+    email: String,
+    scheduled: String,
+    setting: String
 }, {
     timestamps: true
 });

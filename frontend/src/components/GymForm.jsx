@@ -8,25 +8,25 @@ function GymForm() {
 
     const onSubmit = data => {
         let gymQueryString;
-        let neighborhoodQueryString;
+        let regionQueryString;
 
-    if (data.gym === 'all' && data.neighborhood === 'all') {
+    if (data.gym === 'all' && data.region === 'all') {
         gymQueryString = '';
-        neighborhoodQueryString = '';
+        regionQueryString = '';
         navigate(`/gyms`);
-      } else if (data.gym === 'all' && data.neighborhood !== 'all') {
+      } else if (data.gym === 'all' && data.region !== 'all') {
         gymQueryString = '';
-        neighborhoodQueryString = `neighborhood=${data.neighborhood}`;
-        navigate(`/gyms?${neighborhoodQueryString}`);
-      } else if (data.gym !== 'all' && data.neighborhood === 'all') {
+        regionQueryString = `region=${data.region}`;
+        navigate(`/gyms?${regionQueryString}`);
+      } else if (data.gym !== 'all' && data.region === 'all') {
         gymQueryString = `gym=${data.gym}`;
-        neighborhoodQueryString = '';
+        regionQueryString = '';
         navigate(`/gyms?${gymQueryString}`);
       }
       else {
         gymQueryString = `gym=${data.gym}`;
-        neighborhoodQueryString = `neighborhood=${data.neighborhood}`;
-        navigate(`/gyms?${gymQueryString}&${neighborhoodQueryString}`);
+        regionQueryString = `region=${data.region}`;
+        navigate(`/gyms?${gymQueryString}&${regionQueryString}`);
       }
   };
 
@@ -37,10 +37,15 @@ function GymForm() {
           <option value="YMCA">YMCA</option>
           <option value="Chuze Fitness">Chuze Fitness</option>
         </select>
-        <select {...register("neighborhood")} defaultValue={"all"}>
-          <option value="all" disabled>Neighborhood</option>
-          <option value="Chula Vista">Chula Vista</option>
-          <option value="Santee">Santee</option>
+        <select {...register("region")} defaultValue={"all"}>
+          <option value="all" disabled>Region</option>
+          <option value="Central">Central</option>
+          <option value="East">East</option>
+          <option value="South">South</option>
+          <option value="North Central">North Central</option>
+          <option value="North Inland">North Inland</option>
+          <option value="North Coastal">North Coastal</option>
+          <option value="National City">National City</option>
         </select>
 
         <input type="submit" className="submit-btn" />
