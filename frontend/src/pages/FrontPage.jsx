@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../App.css'
 import ActivityForm from '../components/ActivityForm';
 import ResourceForm from '../components/ResourceForm';
@@ -8,18 +7,18 @@ import GymForm from '../components/GymForm';
 function FrontPage() {
   return (
     <>
-    <p className="container2 k5">This will be a paragraph, etc. with a description, etc.</p>
+    <span className="k5">Please enjoy the free to low-cost resources collected below. Remember, you live in San Diego! Find your favorite local coastline, park, or urban space to get out and move your body. If you're 65+, <a href="http://tools.silversneakers.com" target="_blank" rel="noopener noreferrer" class="emphasized">you may be eligible for a free program, Silver Sneakers, click here to find out</a>.</span>
     <div className="container">
       <div className="card">
-        <Link to="/activities" className="btn link">Activities</Link>
+        <h3>Physical Activities</h3>
         <ActivityForm />
       </div>
       <div className="card">
-        <Link to="/resources" className="btn link">Digital Resources</Link>
+        <h3>Digital Resources</h3>
         <ResourceForm />
       </div>
       <div className="card">
-        <Link to="/gyms" className="btn link">Gyms</Link>
+        <h3>Gyms</h3>
         <GymForm />
       </div>
     </div>

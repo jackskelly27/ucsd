@@ -36,6 +36,10 @@ h1 {
     text-align: center;
 }
 
+.emphasized {
+    font-style: italic;
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -77,6 +81,9 @@ h1 {
     padding-top: 40px;
     font-weight: 600;
     padding-bottom: 40px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
@@ -84,6 +91,7 @@ h1 {
     border: 1px solid #000;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 form {
@@ -91,17 +99,17 @@ form {
 }
 
 .submit-btn {
-    display: block;
+    display:flex;
 }
 
 .img-left {
     float: left;
-    height: 100px;
+    width: 120px;
 }
 
 .img-right {
     float: right;
-    height: 100px;
+    width: 120px;
 }
 
 .header {
