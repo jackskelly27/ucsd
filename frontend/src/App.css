@@ -87,7 +87,7 @@ h1 {
 }
 
 .card {
-    padding: 10px 100px;
+    padding: 20px 10px;
     border: 1px solid #000;
     display: flex;
     flex-direction: column;
@@ -100,6 +100,7 @@ form {
 
 .submit-btn {
     display:flex;
+    margin:auto;
 }
 
 .img-left {

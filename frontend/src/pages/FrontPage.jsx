@@ -11,14 +11,17 @@ function FrontPage() {
     <div className="container">
       <div className="card">
         <h3>Physical Activities</h3>
+        <img src="ActivitiesImage.png" alt="Physical Activities" height="110"/>
         <ActivityForm />
       </div>
       <div className="card">
         <h3>Digital Resources</h3>
+        <img src="ResourcesImage.png" alt="Digital Resources" height="110"/>
         <ResourceForm />
       </div>
       <div className="card">
         <h3>Gyms</h3>
+        <img src="GymsImage.png" alt="Gyms" height="110"/>
         <GymForm />
       </div>
     </div>
