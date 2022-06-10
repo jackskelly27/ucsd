@@ -4,7 +4,6 @@ function ActivityItem({activity}) {
   return (
     <tr>
       <td>{activity.name}</td>
-      <td>{activity.type}</td>
       <td>{activity.description}</td>
       <td>{activity.location}</td>
       <td>{activity.zip}</td>

@@ -21,7 +21,6 @@ const createActivity = asyncHandler(async (req, res) => {
 
     const activity = await Activity.create({
         name: req.body.name,
-        type: req.body.type,
         description: req.body.description,
         location: req.body.location,
         zip: req.body.zip,
