@@ -1,5 +1,5 @@
 html {
-    background-color: #ced0ff;
+    background-color: #e7e8ff;
     color: black;
     font-family: Verdana
 }
@@ -17,6 +17,15 @@ h1 {
 
 form {
     margin: 10px 0;
+}
+
+.blue {
+    background-color:white;
+}
+
+.font-link {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
 }
 
 .App {
@@ -117,7 +126,7 @@ form {
 
 .img-left {
     float: left;
-    width: 120px;
+    width: 200px;
 }
 
 .img-right {
