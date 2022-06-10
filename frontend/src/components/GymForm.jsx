@@ -34,18 +34,18 @@ function GymForm() {
     <form onSubmit={handleSubmit(onSubmit)}>
         <select {...register("gym")} defaultValue={"all"}>
           <option value="all" disabled>Gym</option>
-          <option value="YMCA">YMCA</option>
           <option value="Chuze Fitness">Chuze Fitness</option>
+          <option value="YMCA">YMCA</option>
         </select>
         <select {...register("region")} defaultValue={"all"}>
           <option value="all" disabled>Region</option>
           <option value="Central">Central</option>
           <option value="East">East</option>
-          <option value="South">South</option>
-          <option value="North Central">North Central</option>
-          <option value="North Inland">North Inland</option>
-          <option value="North Coastal">North Coastal</option>
           <option value="National City">National City</option>
+          <option value="North Central">North Central</option>
+          <option value="North Coastal">North Coastal</option>
+          <option value="North Inland">North Inland</option>
+          <option value="South">South</option>
         </select>
 
         <input type="submit" className="submit-btn" />

@@ -35,8 +35,8 @@ function ResourceForm() {
     <form onSubmit={handleSubmit(onSubmit)}>
         <select {...register("type")} defaultValue={"all"}>
         <option value="all" disabled>Type</option>
-        <option value="YouTube Channel">YouTube Channel</option>
         <option value="App">App</option>
+        <option value="YouTube Channel">YouTube Channel</option>
         </select>
         <select {...register("costNote")} defaultValue={"all"}>
           <option value="all" disabled>Cost</option>
