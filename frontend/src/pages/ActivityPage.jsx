@@ -13,6 +13,7 @@ function ActivityPage() {
   const query = useQuery();
 
   const region = query.get('region');
+  const description = query.get('description');
 
   const { activities, isLoading, isError, message } = useSelector(
     (state) => state.activities
@@ -23,10 +24,14 @@ function ActivityPage() {
       console.log(message)
     }
     
-    if (!region) {
+    if (!region && !description) {
       dispatch(getActivities());
-    } else {
+    } else if (!region && description) {
+      dispatch(getActivities({description}));
+    } else if (region && !description) {
       dispatch(getActivities({region}));
+    } else {
+      dispatch(getActivities({region, description}));
     }
 
     if(!isError) {
