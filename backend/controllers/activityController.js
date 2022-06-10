@@ -31,7 +31,7 @@ const createActivity = asyncHandler(async (req, res) => {
         site: req.body.site,
         email: req.body.email,
         scheduled: req.body.scheduled,
-        setting: req.body.scheduled
+        setting: req.body.setting
     });
 
     console.log(activity);
