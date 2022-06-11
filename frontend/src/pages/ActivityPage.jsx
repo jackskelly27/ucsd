@@ -12,8 +12,23 @@ function ActivityPage() {
   const dispatch = useDispatch();
   const query = useQuery();
 
-  const region = query.get('region');
-  const description = query.get('description');
+  const activityQueryParams = {
+    region: query.get('region'),
+    description: query.get('description')
+  }
+
+  console.log(activityQueryParams);
+ 
+  const activityParamsArray = Object.entries(activityQueryParams);
+
+  console.log('this is the activityParamsArray', activityParamsArray);
+  const filteredActivityParamsArray = activityParamsArray.filter((subArray) => {
+    return subArray[1] !== null;
+  });
+
+  console.log('this is the filtered Activity Params Array', filteredActivityParamsArray);
+
+  const filteredActivityQueryParams = Object.fromEntries(filteredActivityParamsArray);
 
   const { activities, isLoading, isError, message } = useSelector(
     (state) => state.activities
@@ -24,15 +39,7 @@ function ActivityPage() {
       console.log(message)
     }
     
-    if (!region && !description) {
-      dispatch(getActivities());
-    } else if (!region && description) {
-      dispatch(getActivities({description}));
-    } else if (region && !description) {
-      dispatch(getActivities({region}));
-    } else {
-      dispatch(getActivities({region, description}));
-    }
+    dispatch(getActivities(filteredActivityQueryParams));
 
     if(!isError) {
 
@@ -46,6 +53,7 @@ function ActivityPage() {
     return (<><h5>Loading...</h5></>);
   }
 
+  const { region, description } = activityQueryParams;
   return (
     <>
       <section className='heading'><h1>{region ? region : "All"} {description} Activities!</h1></section>
@@ -62,7 +70,7 @@ function ActivityPage() {
               <th>Description</th>
               <th>Location</th>
               <th>Zip</th>
-              <th>Region</th>{region ? region : "All"}
+              <th>Region</th>
               <th>Cost</th>
               <th>When</th>
               <th>Phone</th>

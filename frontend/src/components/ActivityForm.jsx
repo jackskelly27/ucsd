@@ -2,6 +2,7 @@ import React from 'react'
 //dependences: react-hook-form
 import {useForm} from 'react-hook-form'
 import {useNavigate} from 'react-router-dom'
+import {convertSelectionsToQueryString} from '../utils'
 
 function ActivityForm() {
     //redirect user to activities page with the correct parameter when form is submitted
@@ -9,27 +10,11 @@ function ActivityForm() {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        let regionQueryString;
-        let descriptionQueryString;
 
-    if (data.region === 'all' && data.description === 'all') {
-      regionQueryString = '';
-      descriptionQueryString = '';
-      navigate(`/activities`);
-    } else if (data.region === 'all' && data.description !== 'all') {
-      regionQueryString = '';
-      descriptionQueryString = `description=${data.description}`;
-      navigate(`/activities?${descriptionQueryString}`);
-    } else if (data.region !== 'all' && data.description === 'all') {
-      regionQueryString = `region=${data.region}`;
-      descriptionQueryString = '';
-      navigate(`/activities?${regionQueryString}`);
-    } else {
-      regionQueryString = `region=${data.region}`;
-      descriptionQueryString = `description=${data.description}`;
-      navigate(`/activities?${regionQueryString}&${descriptionQueryString}`);
+      const queryString = convertSelectionsToQueryString(data);
+      
+      navigate(`/activities?${queryString}`);
     }
-  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
