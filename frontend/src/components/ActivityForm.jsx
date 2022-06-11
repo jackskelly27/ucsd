@@ -34,6 +34,11 @@ function ActivityForm() {
         <option value="Strength Training">Strength Training</option>
         <option value="Walking">Walking</option>
         </select>
+        <select {...register("scheduled")} defaultValue={"all"}>
+        <option value="all" disabled>Scheduled</option>
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+        </select>
         <input type="submit" className="submit-btn" />
     </form>
   )

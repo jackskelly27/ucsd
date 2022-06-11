@@ -14,14 +14,12 @@ function ActivityPage() {
 
   const activityQueryParams = {
     region: query.get('region'),
-    description: query.get('description')
+    description: query.get('description'),
+    scheduled: query.get('scheduled')
   }
-
-  console.log(activityQueryParams);
  
   const activityParamsArray = Object.entries(activityQueryParams);
 
-  console.log('this is the activityParamsArray', activityParamsArray);
   const filteredActivityParamsArray = activityParamsArray.filter((subArray) => {
     return subArray[1] !== null;
   });
