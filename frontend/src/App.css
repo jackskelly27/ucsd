@@ -21,6 +21,8 @@ form {
 
 .blue {
     background-color:white;
+    display: flex;
+    justify-content: space-between;
 }
 
 .font-link {
@@ -125,49 +127,25 @@ form {
 }
 
 .img-left {
-    float: left;
     width: 200px;
 }
 
 .img-right {
-    float: right;
     width: 120px;
 }
 
 .header {
+    display: flex;
     vertical-align: center;
     text-align: center;
     height: 120px;
 }
 
-.carousel {
-    overflow: hidden;
-}
-
-.inner {
-    white-space: nowrap;
-    transition: transform 1s;
-}
-
-.carousel-item {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e7e8ff;
-    color: #fff;
-    margin-top: 20px;
-}
-
-.indicators {
-    display: flex;
-    justify-content: center;
-}
-
-.indicators > button {
-    margin: 5px;
-}
-
-.indicators > button.active {
-    background-color: blue;
-    color: #fff;
-}
+.container3 {
+    padding: 40px;
+    background: #c5c7ff;
+  }
+  
+  .slick-slide img {
+    margin: auto;
+  }
