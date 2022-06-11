@@ -48,7 +48,7 @@ function ActivityPage() {
 
   return (
     <>
-      <section className='heading'><h1>{region ? region : "All"} Activities!</h1></section>
+      <section className='heading'><h1>{region ? region : "All"} {description} Activities!</h1></section>
       <div className="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
@@ -62,7 +62,7 @@ function ActivityPage() {
               <th>Description</th>
               <th>Location</th>
               <th>Zip</th>
-              <th>Region</th>
+              <th>Region</th>{region ? region : "All"}
               <th>Cost</th>
               <th>When</th>
               <th>Phone</th>
