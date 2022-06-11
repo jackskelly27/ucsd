@@ -139,3 +139,35 @@ form {
     text-align: center;
     height: 120px;
 }
+
+.carousel {
+    overflow: hidden;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e8ff;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+}
+
+.indicators > button {
+    margin: 5px;
+}
+
+.indicators > button.active {
+    background-color: blue;
+    color: #fff;
+}
