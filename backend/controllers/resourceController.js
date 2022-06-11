@@ -6,7 +6,7 @@ const Resource = require("../models/resourceModel");
 // @route GET /api/resources
 const getResources = asyncHandler(async (req, res) => {
 
-    const resources = await Resource.find(req.query);
+    const resources = await Resource.find(req.query).sort({channel: 1});
 
     res.status(200).json(resources);
 });

@@ -12,7 +12,8 @@ const activitySchema = mongoose.Schema({
     site: String,
     email: String,
     scheduled: String,
-    setting: String
+    setting: String,
+    costNote: String
 }, {
     timestamps: true
 });
