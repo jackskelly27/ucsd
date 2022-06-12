@@ -1,42 +1,29 @@
 import React from 'react'
 import {useForm} from 'react-hook-form'
 import {useNavigate} from 'react-router-dom'
+import {convertSelectionsToQueryString} from '../utils'
 
 function GymForm() {
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        let gymQueryString;
-        let regionQueryString;
-
-    if (data.gym === 'all' && data.region === 'all') {
-        gymQueryString = '';
-        regionQueryString = '';
-        navigate(`/gyms`);
-      } else if (data.gym === 'all' && data.region !== 'all') {
-        gymQueryString = '';
-        regionQueryString = `region=${data.region}`;
-        navigate(`/gyms?${regionQueryString}`);
-      } else if (data.gym !== 'all' && data.region === 'all') {
-        gymQueryString = `gym=${data.gym}`;
-        regionQueryString = '';
-        navigate(`/gyms?${gymQueryString}`);
-      }
-      else {
-        gymQueryString = `gym=${data.gym}`;
-        regionQueryString = `region=${data.region}`;
-        navigate(`/gyms?${gymQueryString}&${regionQueryString}`);
-      }
+      
+      const queryString = convertSelectionsToQueryString(data);
+      
+      navigate(`/gyms?${queryString}`);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <tr>
         <select {...register("gym")} defaultValue={"all"}>
           <option value="all" disabled>Gym</option>
           <option value="Chuze Fitness">Chuze Fitness</option>
           <option value="YMCA">YMCA</option>
         </select>
+      </tr>
+      <tr>
         <select {...register("region")} defaultValue={"all"}>
           <option value="all" disabled>Region</option>
           <option value="Central Coast">Central Coast</option>
@@ -46,8 +33,11 @@ function GymForm() {
           <option value="San Diego-Central">San Diego-Central</option>
           <option value="South Bay">South Bay</option>
         </select>
-
+      </tr>
+      <br></br>
+      <tr>
         <input type="submit" className="submit-btn" />
+      </tr>
     </form>
   )
 }

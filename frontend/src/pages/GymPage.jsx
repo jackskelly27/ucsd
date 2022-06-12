@@ -12,8 +12,18 @@ function GymPage() {
   const dispatch = useDispatch();
   const query = useQuery();
 
-  const gym = query.get('gym');
-  const region = query.get('region');
+  const gymQueryParams = {
+    gym: query.get('gym'),
+    region: query.get('region')
+  }
+ 
+  const gymParamsArray = Object.entries(gymQueryParams);
+
+  const filteredGymParamsArray = gymParamsArray.filter((subArray) => {
+    return subArray[1] !== null;
+  });
+
+  const filteredGymQueryParams = Object.fromEntries(filteredGymParamsArray);
 
   const { gyms, isLoading, isError, message } = useSelector(
     (state) => state.gyms
@@ -24,16 +34,7 @@ function GymPage() {
       console.log(message)
     }
     
-    if (!gym && !region) {
-      dispatch(getGyms());
-    } else if (!gym && region) {
-      dispatch(getGyms({region}));
-    } else if (gym && !region) {
-      dispatch(getGyms({gym}));
-    } else {
-      dispatch(getGyms({region, gym}));
-    }
-    
+    dispatch(getGyms(filteredGymQueryParams));
 
     if(!isError) {
 
@@ -47,6 +48,7 @@ function GymPage() {
     return (<><h5>Loading...</h5></>);
   }
 
+  const { gym, region } = gymQueryParams;
   return (
     <>
       <section className='heading'><h1>{gym ? gym : "All"} {region} Gyms!</h1></section>

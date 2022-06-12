@@ -12,8 +12,18 @@ function ResourcePage() {
   const dispatch = useDispatch();
   const query = useQuery();
 
-  const type = query.get('type');
-  const costNote = query.get('costNote');
+  const resourceQueryParams = {
+    type: query.get('type'),
+    costNote: query.get('costNote')
+  }
+ 
+  const resourceParamsArray = Object.entries(resourceQueryParams);
+
+  const filteredResourceParamsArray = resourceParamsArray.filter((subArray) => {
+    return subArray[1] !== null;
+  });
+
+  const filteredResourceQueryParams = Object.fromEntries(filteredResourceParamsArray);
 
   const { resources, isLoading, isError, message } = useSelector(
     (state) => state.resources
@@ -24,16 +34,8 @@ function ResourcePage() {
       console.log(message)
     }
 
-    if (!type && !costNote) {
-      dispatch(getResources());
-    } else if (!type && costNote) {
-      dispatch(getResources({costNote}));
-    } else if (type && !costNote) {
-      dispatch(getResources({type}));
-    } else {
-      dispatch(getResources({type, costNote}));
-    }
-    
+    dispatch(getResources(filteredResourceQueryParams));
+
     if(!isError) {
 
       dispatch(reset())
@@ -46,6 +48,7 @@ function ResourcePage() {
     return (<><h5>Loading...</h5></>);
   }
 
+  const { type, costNote} = resourceQueryParams;
   return (
     <>
       <section className='heading'><h1>{type ? type : "All"} {costNote} Digital Resources!</h1></section>

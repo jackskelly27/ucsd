@@ -15,7 +15,9 @@ function ActivityPage() {
   const activityQueryParams = {
     region: query.get('region'),
     description: query.get('description'),
-    scheduled: query.get('scheduled')
+    costNote: query.get('costNote'),
+    scheduled: query.get('scheduled'),
+    setting: query.get('setting')
   }
  
   const activityParamsArray = Object.entries(activityQueryParams);
@@ -23,8 +25,6 @@ function ActivityPage() {
   const filteredActivityParamsArray = activityParamsArray.filter((subArray) => {
     return subArray[1] !== null;
   });
-
-  console.log('this is the filtered Activity Params Array', filteredActivityParamsArray);
 
   const filteredActivityQueryParams = Object.fromEntries(filteredActivityParamsArray);
 
@@ -51,10 +51,10 @@ function ActivityPage() {
     return (<><h5>Loading...</h5></>);
   }
 
-  const { region, description } = activityQueryParams;
+  const { region, description, costNote, setting } = activityQueryParams;
   return (
     <>
-      <section className='heading'><h1>{region ? region : "All"} {description} Activities!</h1></section>
+      <section className='heading'><h1>{region ? region : "All"} {description} {costNote} {setting} Activities!</h1></section>
       <div className="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
