@@ -72,8 +72,6 @@ function ActivityPage() {
               <th>Cost</th>
               <th>When</th>
               <th>Phone</th>
-              <th>Site</th>
-              <th>Email</th>
               <th>Scheduled</th>
               <th>Setting</th>
             </tr>

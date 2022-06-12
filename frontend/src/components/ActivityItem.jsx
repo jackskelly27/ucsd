@@ -11,8 +11,6 @@ function ActivityItem({activity}) {
       <td>{activity.cost}</td>
       <td>{activity.when}</td>
       <td>{activity.phone}</td>
-      <td>{activity.site}</td>
-      <td>{activity.email}</td>
       <td>{activity.scheduled}</td>
       <td>{activity.setting}</td>
     </tr>
