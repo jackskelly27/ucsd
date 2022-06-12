@@ -58,7 +58,7 @@ function GymPage() {
 
       <section class="container2">
       {gyms.length > 0 ? (
-        <table>
+        <table class="content-table">
           <thead>
             <tr>
               <th>Gym</th>

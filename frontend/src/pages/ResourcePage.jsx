@@ -58,7 +58,7 @@ function ResourcePage() {
 
       <section class="container2">
       {resources.length > 0 ? (
-        <table>
+        <table class="content-table">
           <thead>
             <tr>
               <th>Channel</th>
