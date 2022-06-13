@@ -19,7 +19,10 @@ function GymForm() {
       <tr>
         <select {...register("gym")} defaultValue={"all"}>
           <option value="all" disabled>Gym</option>
+          <option value="24-Hour Fitness">24-Hour Fitness</option>
           <option value="Chuze Fitness">Chuze Fitness</option>
+          <option value="Crunch Fitness">Crunch Fitness</option>
+          <option value="LA Fitness">LA Fitness</option>
           <option value="YMCA">YMCA</option>
         </select>
       </tr>
