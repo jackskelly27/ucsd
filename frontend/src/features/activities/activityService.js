@@ -21,7 +21,7 @@ const getActivities = async (queryParams) => {
       return key + '=' + queryParams[key]
     }).join('&');
     
-    console.log('this is in the service, it is the query string', queryString);
+    //console.log('this is in the service, it is the query string', queryString);
   
     response = await axios.get(`${config.api.url}/api/activities?${queryString}`);
   }

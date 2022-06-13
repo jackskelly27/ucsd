@@ -26,7 +26,13 @@ function ActivityPage() {
     return subArray[1] !== null;
   });
 
+  const filteredArrayTest = activityParamsArray.filter((subArray) => {
+    return (subArray[1] === null && subArray[0] !== "costNote");
+  });
+
   const filteredActivityQueryParams = Object.fromEntries(filteredActivityParamsArray);
+  const filteredParamsTest=Object.fromEntries(filteredArrayTest);
+  const header=Object.keys(filteredParamsTest);
 
   const { activities, isLoading, isError, message } = useSelector(
     (state) => state.activities
@@ -65,15 +71,14 @@ function ActivityPage() {
           <thead>
             <tr>
               <th>Name</th>
-              <th>Description</th>
+              {header.map((key,index) => (
+                <th key={index}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>
+              ))}
               <th>Location</th>
               <th>Zip</th>
-              <th>Region</th>
               <th>Cost</th>
               <th>When</th>
               <th>Phone</th>
-              <th>Scheduled</th>
-              <th>Setting</th>
             </tr>
           </thead>
           <tbody>

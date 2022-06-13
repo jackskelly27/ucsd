@@ -10,5 +10,7 @@ export function convertSelectionsToQueryString(selectionData) {
       return  key + '=' + filteredData[key]
     }).join('&');
 
+    console.log(queryString);
+
     return queryString;
 }
