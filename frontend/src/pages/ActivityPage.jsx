@@ -5,6 +5,7 @@ import { getActivities, reset } from '../features/activities/activitySlice'
 import ActivityItem from '../components/ActivityItem'
 import {useNavigate} from 'react-router-dom'
 import {useQuery} from '../utils'
+import ScrollToTop from 'react-scroll-to-top'
 
 function ActivityPage() {
 
@@ -60,6 +61,7 @@ function ActivityPage() {
   const { region, description, costNote, setting } = activityQueryParams;
   return (
     <>
+      <ScrollToTop smooth />
       <section className='heading'><h1>{region ? region : "All"} {description} {costNote} {setting} Activities!</h1></section>
       <div className="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
