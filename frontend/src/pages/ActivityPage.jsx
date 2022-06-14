@@ -26,13 +26,13 @@ function ActivityPage() {
     return subArray[1] !== null;
   });
 
-  const filteredArrayTest = activityParamsArray.filter((subArray) => {
-    return (subArray[1] === null && subArray[0] !== "costNote");
-  });
+  // const filteredArrayTest = activityParamsArray.filter((subArray) => {
+  //   return (subArray[1] === null && subArray[0] !== "costNote");
+  // });
 
   const filteredActivityQueryParams = Object.fromEntries(filteredActivityParamsArray);
-  const filteredParamsTest=Object.fromEntries(filteredArrayTest);
-  const header=Object.keys(filteredParamsTest);
+  //const filteredParamsTest=Object.fromEntries(filteredArrayTest);
+  //const header=Object.keys(filteredParamsTest);
 
   const { activities, isLoading, isError, message } = useSelector(
     (state) => state.activities
