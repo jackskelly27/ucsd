@@ -71,9 +71,13 @@ function ActivityPage() {
           <thead>
             <tr>
               <th>Name</th>
-              {header.map((key,index) => (
+              {/* {header.map((key,index) => (
                 <th key={index}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>
-              ))}
+              ))} */}
+              <th>Region</th>
+              <th>Description</th>
+              <th>Scheduled</th>
+              <th>Setting</th>
               <th>Location</th>
               <th>Zip</th>
               <th>Cost</th>
