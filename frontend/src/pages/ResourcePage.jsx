@@ -5,6 +5,7 @@ import { getResources, reset } from '../features/resources/resourceSlice'
 import ResourceItem from '../components/ResourceItem'
 import {useNavigate} from 'react-router-dom'
 import {useQuery} from '../utils'
+import ScrollToTop from 'react-scroll-to-top'
 
 function ResourcePage() {
 
@@ -51,7 +52,8 @@ function ResourcePage() {
   const { type, costNote} = resourceQueryParams;
   return (
     <>
-      <section className='heading'><h1>{type ? type : "All"} {costNote} Digital Resources!</h1></section>
+      <ScrollToTop smooth />
+      <section className='heading'><h1>{type ? type : "All"} {costNote} Digital Resources</h1></section>
       <div class="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>

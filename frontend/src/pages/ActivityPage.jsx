@@ -27,13 +27,7 @@ function ActivityPage() {
     return subArray[1] !== null;
   });
 
-  // const filteredArrayTest = activityParamsArray.filter((subArray) => {
-  //   return (subArray[1] === null && subArray[0] !== "costNote");
-  // });
-
   const filteredActivityQueryParams = Object.fromEntries(filteredActivityParamsArray);
-  //const filteredParamsTest=Object.fromEntries(filteredArrayTest);
-  //const header=Object.keys(filteredParamsTest);
 
   const { activities, isLoading, isError, message } = useSelector(
     (state) => state.activities
@@ -58,11 +52,11 @@ function ActivityPage() {
     return (<><h5>Loading...</h5></>);
   }
 
-  const { region, description, costNote, setting } = activityQueryParams;
+  const { region, description, costNote, setting, scheduled } = activityQueryParams;
   return (
     <>
       <ScrollToTop smooth />
-      <section className='heading'><h1>{region ? region : "All"} {description} {costNote} {setting} Activities!</h1></section>
+      <section className='heading'><h1>{region ? region : "All"} {description} {costNote} {setting} {scheduled} Activities</h1></section>
       <div className="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
@@ -73,12 +67,9 @@ function ActivityPage() {
           <thead>
             <tr>
               <th>Name</th>
-              {/* {header.map((key,index) => (
-                <th key={index}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>
-              ))} */}
               <th>Region</th>
               <th>Description</th>
-              <th>Scheduled</th>
+              <th>Timing</th>
               <th>Setting</th>
               <th>Location</th>
               <th>Zip</th>

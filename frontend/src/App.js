@@ -7,7 +7,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import ResourcePage from './pages/ResourcePage'
 import GymPage from './pages/GymPage'
-import ScrollToTop from './utils/scrollToTop';
+import ScrollToTop from './components/Scroll/scrollToTop';
 
 function App() {
   return (

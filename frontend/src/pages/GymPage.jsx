@@ -5,6 +5,7 @@ import { getGyms, reset } from '../features/gyms/gymSlice'
 import GymItem from '../components/GymItem'
 import {useNavigate} from 'react-router-dom'
 import {useQuery} from '../utils'
+import ScrollToTop from 'react-scroll-to-top'
 
 function GymPage() {
 
@@ -51,7 +52,8 @@ function GymPage() {
   const { gym, region } = gymQueryParams;
   return (
     <>
-      <section className='heading'><h1>{gym ? gym : "All"} {region} Gyms!</h1></section>
+    <ScrollToTop smooth />
+      <section className='heading'><h1>{gym ? gym : "All"} {region} Gyms</h1></section>
       <div class="flex-parent jc-center">
         <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>

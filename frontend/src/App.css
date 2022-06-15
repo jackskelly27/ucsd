@@ -164,7 +164,7 @@ h1 {
   .content-table thead tr {
     background: var(--main-color);
     color:black;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
   }
   

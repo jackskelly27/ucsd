@@ -20,6 +20,7 @@ function ResourceForm() {
         <select {...register("type")} defaultValue={"all"}>
           <option value="all" disabled>Type</option>
           <option value="App">App</option>
+          <option value="Show">Show</option>
           <option value="YouTube Channel">YouTube Channel</option>
         </select>
       </tr>
