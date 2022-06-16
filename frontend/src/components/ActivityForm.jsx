@@ -31,9 +31,17 @@ function ActivityForm() {
         <select {...register("description")} defaultValue={"all"}>
           <option value="all" disabled>Description</option>
           <option value="Badminton">Badminton</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Biking">Biking</option>
+          <option value="Dance">Dance</option>
+          <option value="Hiking">Hiking</option>
+          <option value="Pickleball">Pickleball</option>
           <option value="Running">Running</option>
           <option value="Strength Training">Strength Training</option>
+          <option value="Swimming">Swimming</option>
+          <option value="Tennis">Tennis</option>
           <option value="Walking">Walking</option>
+          <option value="Yoga">Yoga</option>
         </select>
       </tr>
       <tr>
