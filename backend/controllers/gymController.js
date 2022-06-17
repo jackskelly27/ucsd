@@ -6,7 +6,7 @@ const Gym = require("../models/gymModel");
 // @route GET /api/gyms
 const getGyms = asyncHandler(async (req, res) => {
 
-    const gyms = await Gym.find(req.query).sort({gym: 1});
+    const gyms = await Gym.find(req.query).sort({gym: 1, region: 1});
 
     res.status(200).json(gyms);
 });
