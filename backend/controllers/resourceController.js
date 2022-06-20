@@ -7,17 +7,33 @@ const Resource = require("../models/resourceModel");
 const getResources = asyncHandler(async (req, res) => {
 
     console.log('req.query', req.query);
-    const queryArray = Object.entries(req.query);
-    console.log('queryArray', queryArray);
+    const queryAndSortArray = Object.entries(req.query);
+    console.log('queryAndSortArray', queryAndSortArray);
+
+    // const searchObject = Object.fromEntries(
+    //     queryArray.filter(([key, value]) => {
+    //         return value !== '1' && value !== '-1'; 
+    //     }),
+    // );
 
     const searchObject = Object.fromEntries(
-        queryArray.filter(([key, value]) => {
-            return value !== '1' && value !== '-1'; 
-        }),
-    );
-    console.log('seachObject', searchObject);
+        queryAndSortArray.filter(([key, value]) => {
+            return key !== 'sort';
+        })
+    )
+
+    const sortObjectWithArray = Object.fromEntries(
+        queryAndSortArray.filter(([key, value]) => {
+            return key === 'sort';
+        })
+    ); // this will return { sort: ["channel", "1"]}
+
+    const sortObject = Object.fromEntries(sortObjectWithArray.sort);
+
+    console.log('searchObject', searchObject);
+    console.log('sortObject', sortObject);
     
-    const resources = await Resource.find(searchObject).sort();
+    const resources = await Resource.find(searchObject).sort(sortObject);
 
     res.status(200).json(resources);
 });
