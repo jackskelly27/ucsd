@@ -6,7 +6,18 @@ const Resource = require("../models/resourceModel");
 // @route GET /api/resources
 const getResources = asyncHandler(async (req, res) => {
 
-    const resources = await Resource.find(req.query).sort({channel: 1});
+    console.log('req.query', req.query);
+    const queryArray = Object.entries(req.query);
+    console.log('queryArray', queryArray);
+
+    const searchObject = Object.fromEntries(
+        queryArray.filter(([key, value]) => {
+            return value !== '1' && value !== '-1'; 
+        }),
+    );
+    console.log('seachObject', searchObject);
+    
+    const resources = await Resource.find(searchObject).sort();
 
     res.status(200).json(resources);
 });
@@ -25,7 +36,8 @@ const createResource = asyncHandler(async (req, res) => {
         cost: req.body.cost,
         time: req.body.time,
         notes: req.body.notes,
-        costNote: req.body.costNote
+        costNote: req.body.costNote,
+        sortObject: req.body.sortObject
     });
 
     console.log(resource);

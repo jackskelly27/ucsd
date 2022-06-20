@@ -15,16 +15,23 @@ function ResourcePage() {
 
   const resourceQueryParams = {
     type: query.get('type'),
-    costNote: query.get('costNote')
+    costNote: query.get('costNote'),
+    sort: ["channel", "1"]
   }
+
+  console.log('resourceQueryParams', resourceQueryParams);
  
   const resourceParamsArray = Object.entries(resourceQueryParams);
+
+  console.log('resourceParamsArray', resourceParamsArray);
 
   const filteredResourceParamsArray = resourceParamsArray.filter((subArray) => {
     return subArray[1] !== null;
   });
 
   const filteredResourceQueryParams = Object.fromEntries(filteredResourceParamsArray);
+
+  console.log('filteredResourceQueryParams', filteredResourceQueryParams);
 
   const { resources, isLoading, isError, message } = useSelector(
     (state) => state.resources
