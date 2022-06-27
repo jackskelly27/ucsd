@@ -1,3 +1,5 @@
+//import { convertCommaStringToObject } from "../../frontend/src/utils/convertCommaStringToObject";
+
 const asyncHandler = require("express-async-handler");
 
 const Resource = require("../models/resourceModel");
@@ -10,30 +12,34 @@ const getResources = asyncHandler(async (req, res) => {
     const queryAndSortArray = Object.entries(req.query);
     console.log('queryAndSortArray', queryAndSortArray);
 
-    // const searchObject = Object.fromEntries(
-    //     queryArray.filter(([key, value]) => {
-    //         return value !== '1' && value !== '-1'; 
-    //     }),
-    // );
-
     const searchObject = Object.fromEntries(
         queryAndSortArray.filter(([key, value]) => {
             return key !== 'sort';
-        })
-    )
+        }),
+    );
 
-    const sortObjectWithArray = Object.fromEntries(
+    const sortObject = Object.fromEntries(
         queryAndSortArray.filter(([key, value]) => {
             return key === 'sort';
         })
-    ); // this will return { sort: ["channel", "1"]}
+    );
 
-    const sortObject = Object.fromEntries(sortObjectWithArray.sort);
+    function convertCommaStringToObject(commaString) {
+
+        const splitString = commaString.split(",");
+      
+        let resultObject = {};
+      
+        resultObject[splitString[0]] = splitString[1];
+        return resultObject;
+      }
+
+    finalSortObject = (convertCommaStringToObject(sortObject.sort));
 
     console.log('searchObject', searchObject);
-    console.log('sortObject', sortObject);
+    console.log('finalSortObject', finalSortObject);
     
-    const resources = await Resource.find(searchObject).sort(sortObject);
+    const resources = await Resource.find(searchObject).sort(finalSortObject);
 
     res.status(200).json(resources);
 });
@@ -52,8 +58,7 @@ const createResource = asyncHandler(async (req, res) => {
         cost: req.body.cost,
         time: req.body.time,
         notes: req.body.notes,
-        costNote: req.body.costNote,
-        sortObject: req.body.sortObject
+        costNote: req.body.costNote
     });
 
     console.log(resource);

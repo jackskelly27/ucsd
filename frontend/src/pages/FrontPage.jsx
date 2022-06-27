@@ -12,7 +12,16 @@ function FrontPage() {
     <div>
       <SimpleSlider />
     </div>
-    <span className="k5">Please enjoy the free to low-cost resources collected below. Remember, you live in San Diego! Find your favorite local coastline, park, or urban space to get out and move your body. If you're 65+, <a href="http://tools.silversneakers.com" target="_blank" rel="noopener noreferrer" class="emphasized">you may be eligible for a free program, Silver Sneakers, click here to find out</a>.</span>
+    <div className="container4">
+      <div className="card2">
+        <span className="k7">Please enjoy the free to low-cost resources collected below. Remember, you live in San Diego! Find your favorite local coastline, park, or urban space to get out and move your body.</span>
+        <img src="Box1.png" alt="Welcome" height="100"/>
+      </div>  
+      <div className="card2">
+        <span className="k7">Over 65? <a href="http://tools.silversneakers.com" target="_blank" rel="noopener noreferrer" class="emphasized">You may be eligible for a free program, Silver Sneakers, click here to find out</a>.</span>
+        <img src="Box2.png" alt="Silver Sneakers" height="100"/>
+      </div>
+    </div>
     <div className="container">
       <div className="card">
         <h3>Physical Activities</h3>
