@@ -1,13 +1,14 @@
 html {
     background-color: #e7e8ff;
     color: black;
-    font-family: Verdana
+    font-family: Verdana;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    line-height: 1.5;
 }
 
 :root {
@@ -19,8 +20,17 @@ h1 {
     text-align: center;
 }
 
+select {
+    background-color: rgb(215, 237, 255);
+    border-radius: 5px;
+}
+
+select option {
+  background-color: rgb(215, 237, 255);
+}
+
 .blue {
-    background-color:white;
+    background-color: white;
     display: flex;
     justify-content: space-between;
 }
@@ -62,13 +72,28 @@ h1 {
     align-items: baseline;
     padding-bottom: 20px;
     justify-content: space-around;
-    background-color:#c5c7ff;
+    /* background-color:#c5c7ff; */
 }
 
 .container2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+
+h6 {
+  margin-bottom: 0px;
+  font-size: 60%;
+}
+
+.box3 h3 {
+  padding-left: 15px;
 }
 
 .flex-parent {
@@ -90,9 +115,10 @@ h1 {
 
 .footer {
     text-align: center;
-    flex: 0 0 50px;
-    margin-top: auto;
-    background-color: white
+    /* flex: 0 0 50px; */
+    /* margin-top: auto; */
+    /* background-color: white; */
+    background-color: #e7e8ff;
 }
 
 .k5 {
@@ -116,6 +142,7 @@ h1 {
 .k7 {
   padding-top: 40px;
   font-weight: 600;
+  font-size: 1.2em;
   padding-bottom: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -138,12 +165,23 @@ h1 {
   display:flex;
   flex-direction: row;
   align-items: center;
-  width: 35%;
+  width: 40%;
+}
+
+.card3 {
+  padding: 20px 10px;
+  /* border: 1px solid #000; */
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  /* width: 40%; */
 }
 
 .submit-btn {
     display:flex;
     margin:auto;
+    background-color: rgb(212, 209, 240);
+    border-radius: 5px;
 }
 
 .img-left {
@@ -162,18 +200,21 @@ h1 {
     vertical-align: center;
     text-align: center;
     height: 120px;
+    background: white;
 }
 
 .container3 {
     /* padding: 10px; */
-    background: #c5c7ff;
+    background: #e7e8ff;
+
   }
 
 .container4 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: #e7e8ff;
+    /* background-color: #e7e8ff; */
+    background-color: white;
   }
 
 .container5 {
@@ -243,8 +284,8 @@ h1 {
 
 .fa {
     padding: 10px;
-    font-size: 20px;
-    width: 20px;
+    font-size: 30px;
+    width: 30px;
     text-align: center;
     text-decoration: none;
   }
@@ -262,4 +303,12 @@ h1 {
 .fa-instagram {  
   background: #125688;  
   color: white;  
-}  
+}
+
+.container6 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
