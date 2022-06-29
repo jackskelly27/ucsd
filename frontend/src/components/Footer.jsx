@@ -12,7 +12,7 @@ function Footer() {
       <a href="https://twitter.com/UCSDHealth?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" alt="Twitter" class="fa fa-twitter"> </a>
       <a href="https://www.instagram.com/ucsdhealth/" alt="Twitter" class="fa fa-instagram"> </a>
       </div>
-      <h5>Matthew Kelly &copy; {today.getFullYear()}</h5>
+      <h6>Matthew Kelly &copy; {today.getFullYear()}</h6>
     </div>
   )
 }
