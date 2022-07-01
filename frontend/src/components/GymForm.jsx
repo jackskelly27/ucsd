@@ -23,8 +23,11 @@ function GymForm() {
           <option value="Boys and Girls Club">Boys and Girls Club</option>
           <option value="Chuze Fitness">Chuze Fitness</option>
           <option value="Crunch Fitness">Crunch Fitness</option>
+          <option value="Grossmont Adult Education">Grossmont Adult Education</option>
           <option value="Jewish Community Center">Jewish Community Center</option>
           <option value="LA Fitness">LA Fitness</option>
+          <option value="Poway Adult School">Poway Adult School</option>
+          <option value="Salvation Army">Salvation Army</option>
           <option value="YMCA">YMCA</option>
         </select>
       </tr>
