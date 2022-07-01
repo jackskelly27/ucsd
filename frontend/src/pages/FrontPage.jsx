@@ -24,19 +24,19 @@ function FrontPage() {
     </div>
     <div className="container">
       <div className="card">
-        <h2>Physical Activities</h2>
+        <h3>Physical Activities</h3>
         <img src="ActivitiesImage.png" alt="Physical Activities" height="140"/>
         <span className="k6">Explore the locations to walk, run, bike, swim, hike, dance, play sports, do yoga, etc. around San Diego!</span>
         <ActivityForm />
       </div>
       <div className="card">
-        <h2>Digital Resources</h2>
+        <h3>Digital Resources</h3>
         <img src="DigitalResourcesNew.png" alt="Digital Resources" height="140"/>
         <span className="k6">Discover YouTube channels, fitness apps, and cable channels to assist with exercise on your own time and in your own space.</span>
         <ResourceForm />
       </div>
       <div className="card">
-        <h2>Gyms</h2>
+        <h3>Gyms & Community Centers</h3>
         <img src="GymsImage.png" alt="Gyms" height="140"/>
         <span className="k6">Search gyms and community centers around town to find a convenient location near you.</span>
         <GymForm />
