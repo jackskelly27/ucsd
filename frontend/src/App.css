@@ -26,9 +26,14 @@ h6 {
   font-size: 60%;
 }
 
+form {
+  display: contents;
+}
+
 select {
     background-color: rgb(215, 237, 255);
     border-radius: 5px;
+    width: 150px;
 }
 
 select option {
@@ -90,7 +95,7 @@ td a:visited {
 }
 
 .card2 {
-  padding: 20px 10px;
+  padding: 10px 10px;
   /* border: 1px solid #000; */
   display:flex;
   flex-direction: row;
@@ -107,7 +112,6 @@ td a:visited {
   /* width: 40%; */
 }
 
-
 .container {
     display: flex;
     align-items: baseline;
@@ -120,7 +124,7 @@ td a:visited {
 .container2 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .container3 {
@@ -309,23 +313,20 @@ td a:visited {
 
 .k6 {
   width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
   font-weight: 600;
-  padding-bottom: 40px;
-  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .k7 {
-  padding-top: 40px;
+  padding-top: 20px;
   font-weight: 600;
   font-size: 1.2em;
-  padding-bottom: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 500px;
 }
 
 .link {
@@ -343,7 +344,18 @@ td a:visited {
 
 .submit-btn {
   display:flex;
-  margin:auto;
   background-color: rgb(212, 209, 240);
   border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.center {
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+  .container4 {
+    display: flex;
+    flex-direction: column;
+  }
 }

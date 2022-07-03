@@ -58,7 +58,8 @@ const createResource = asyncHandler(async (req, res) => {
         cost: req.body.cost,
         time: req.body.time,
         notes: req.body.notes,
-        costNote: req.body.costNote
+        costNote: req.body.costNote,
+        site: req.body.site
     });
 
     console.log(resource);

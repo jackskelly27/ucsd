@@ -58,7 +58,7 @@ function ActivityPage() {
       <ScrollToTop smooth />
       <section className='heading'><h1>{region ? region : "All"} {description} {costNote} {setting} {scheduled} Activities</h1></section>
       <div className="flex-parent jc-center">
-        <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
+        <button className='submit-btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
 
       <section className="container2">

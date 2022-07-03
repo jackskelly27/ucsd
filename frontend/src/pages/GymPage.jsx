@@ -55,7 +55,7 @@ function GymPage() {
     <ScrollToTop smooth />
       <section className='heading'><h1>{gym ? gym : "All"} {region} Gyms & Community Centers</h1></section>
       <div class="flex-parent jc-center">
-        <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
+        <button className='submit-btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
 
       <section class="container2">
@@ -69,7 +69,7 @@ function GymPage() {
               <th>Zip</th>
               <th>Region</th>
               <th>Phone</th>
-              <th>Site</th>
+              <th>Website</th>
             </tr>
           </thead>
           <tbody>

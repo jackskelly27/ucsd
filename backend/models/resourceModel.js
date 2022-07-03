@@ -7,6 +7,7 @@ const resourceSchema = mongoose.Schema({
     time: String,
     notes: String,
     costNote: String,
+    site: String,
     sort: String
 }, {
     timestamps: true

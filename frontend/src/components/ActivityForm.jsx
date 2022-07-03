@@ -67,7 +67,7 @@ function ActivityForm() {
       </tr>
       <br></br>
       <tr>
-        <input type="submit" className="submit-btn" />
+        <input type="submit" className="submit-btn" value="Find"/>
       </tr>
     </form>
   )

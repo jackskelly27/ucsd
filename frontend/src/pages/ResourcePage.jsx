@@ -62,7 +62,7 @@ function ResourcePage() {
       <ScrollToTop smooth />
       <section className='heading'><h1>{type ? type : "All"} {costNote} Digital Resources</h1></section>
       <div class="flex-parent jc-center">
-        <button className='btn' onClick={() => navigate(-1)}>Go Back</button>
+        <button className='submit-btn' onClick={() => navigate(-1)}>Go Back</button>
       </div>
 
       <section class="container2">
@@ -75,6 +75,7 @@ function ResourcePage() {
               <th>Cost</th>
               <th>Time</th>
               <th>Notes</th>
+              <th>Website</th>
             </tr>
           </thead>
           <tbody>
