@@ -352,10 +352,3 @@ td a:visited {
 .center {
   vertical-align: middle;
 }
-
-@media only screen and (max-width: 600px) {
-  .container4 {
-    display: flex;
-    flex-direction: column;
-  }
-}
