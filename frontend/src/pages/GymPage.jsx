@@ -68,7 +68,7 @@ function GymPage() {
               <th>Address</th>
               <th>Zip</th>
               <th>Region</th>
-              <th>Phone</th>
+              <th className="phone">Phone</th>
               <th>Website</th>
             </tr>
           </thead>

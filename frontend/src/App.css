@@ -1,7 +1,5 @@
 html {
     background-color: #e7e8ff;
-    color: black;
-    font-family: Verdana;
 }
 
 body {
@@ -9,6 +7,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     line-height: 1.5;
+    font-size: 1em;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root {
@@ -72,6 +73,12 @@ td a:visited {
       justify-content: space-between;
   }
 
+
+.box1-2p {
+    font-weight: 700;
+    padding-right: 10px;
+  }
+
 .box3 {
     display: flex;
     flex-direction: column;
@@ -113,12 +120,12 @@ td a:visited {
 }
 
 .container {
-    display: flex;
-    align-items: baseline;
-    flex-direction: row;
     padding-bottom: 20px;
-    justify-content: space-evenly;
     /* background-color:#c5c7ff; */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .container2 {
@@ -162,6 +169,10 @@ td a:visited {
   background-color: white;
 }
 
+.container6 h3 {
+  font-size: 1.5em;
+}
+
 .container4 a:visited {
   color: blue;
 }
@@ -185,6 +196,7 @@ td a:visited {
   color:black;
   text-align: center;
   font-weight: bold;
+  min-width: 100px;
 }
 
 .content-table th,
@@ -247,12 +259,6 @@ td a:visited {
   color: white;  
 }
 
-  
-.font-link {
-  font-family: 'Merriweather', serif;
-  font-weight: 400;
-}
-
 .footer {
   text-align: center;
   background-color: #e7e8ff;
@@ -274,14 +280,6 @@ td a:visited {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.header {
-  display: flex;
-  vertical-align: center;
-  text-align: center;
-  height: 120px;
-  background: white;
 }
 
 .img-left {
@@ -319,16 +317,6 @@ td a:visited {
   padding-top: 10px;
 }
 
-.k7 {
-  padding-top: 20px;
-  font-weight: 600;
-  font-size: 1.2em;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 500px;
-}
-
 .link {
     color: #000;
 }
@@ -336,10 +324,31 @@ td a:visited {
 .link:visited {
     color: #000;
 }
+
+.navy {
+  color: navy;
+}
+
+.openSans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* .phone {
+  min-width: 100px;
+} */
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
   
 .slick-slide img {
     margin: auto;
   }
+
+.sourceSansPro {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 
 .submit-btn {
@@ -352,3 +361,4 @@ td a:visited {
 .center {
   vertical-align: middle;
 }
+

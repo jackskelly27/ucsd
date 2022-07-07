@@ -6,7 +6,7 @@ function Header() {
       <a href="https://health.ucsd.edu/specialties/primary-care/family-medicine/pages/default.aspx" target="_blank" rel="noopener noreferrer">
       <img class = "img-left" src="/UCSDLogo.png" alt="UCSD Logo" />
       </a>
-      <h1 class= "logoheader" className="font-link">Physical Activity Resources Near You</h1>
+      <h1 class= "logoheader">Physical Activity Resources Near You</h1>
       <a href="https://www.exerciseismedicine.org/" target="_blank" rel="noopener noreferrer">
       <img class = "img-right" src="/EIMLogo.png" alt="EIM Logo" />
       </a>
