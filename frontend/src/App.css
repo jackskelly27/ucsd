@@ -43,6 +43,7 @@ select option {
 
 .container2 h3 {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
