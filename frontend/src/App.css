@@ -41,6 +41,11 @@ select option {
   background-color: rgb(215, 237, 255);
 }
 
+.container2 h3 {
+  display: flex;
+  justify-content: center;
+}
+
 td a:visited {
   color: blue;
 }
