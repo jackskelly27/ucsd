@@ -74,8 +74,8 @@ function ActivityPage() {
               <th>Location</th>
               <th>Zip</th>
               <th>Cost</th>
-              <th>When</th>
-              <th>Phone</th>
+              <th className="when">When</th>
+              <th className="phone">Phone</th>
             </tr>
           </thead>
           <tbody>
