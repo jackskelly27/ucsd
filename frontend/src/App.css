@@ -353,7 +353,7 @@ td a:visited {
 
 .submit-btn {
   display:flex;
-  background-color: rgb(212, 209, 240);
+  background-color: rgb(144, 149, 214);
   border-radius: 5px;
   font-size: 0.9em;
 }
@@ -407,6 +407,10 @@ td a:visited {
     flex-direction: column;
   }
 
+  .container4 img {
+    height: 150px;
+  }
+
   .box1-2p {
     width: 100%;
   }
@@ -421,7 +425,7 @@ td a:visited {
   }
 
   .container3 img {
-    height:150px;
+    height:180px;
   }
 
   .container6 {
@@ -442,6 +446,14 @@ td a:visited {
     width: 120px;
     padding-right: 10px;
     padding-left: 15px;
+  }
+
+  .right {
+    flex-direction: row-reverse;
+  }
+
+  .right .box1-2p {
+    padding-left: 10px;
   }
 }
 
