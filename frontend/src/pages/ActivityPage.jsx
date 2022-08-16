@@ -68,7 +68,7 @@ function ActivityPage() {
             <tr>
               <th>Name</th>
               <th>Region</th>
-              <th>Description</th>
+              <th>Activity</th>
               <th>Timing</th>
               <th>Setting</th>
               <th>Location</th>

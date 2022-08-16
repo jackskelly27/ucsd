@@ -29,7 +29,7 @@ function ActivityForm() {
       </tr>
       <tr>
         <select {...register("description")} defaultValue={"all"}>
-          <option value="all" disabled>Description</option>
+          <option value="all" disabled>Activity</option>
           <option value="Badminton">Badminton</option>
           <option value="Basketball">Basketball</option>
           <option value="Biking">Biking</option>
