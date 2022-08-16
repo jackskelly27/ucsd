@@ -199,9 +199,14 @@ td a:visited {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 1rem;
-  border-radius: 5px 5px 0 0;
+  /* border-radius: 5px 5px 0 0; */
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.content-table thead {
+  background: white;
 }
 
 .content-table thead tr {
@@ -381,6 +386,7 @@ td a:visited {
 @media only screen and (max-width: 1350px) {
   .content-table {
     font-size: 0.85rem;
+    border-radius: 0;
   }
 
   .content-table th,
@@ -405,7 +411,7 @@ td a:visited {
   }
 
   table {
-    border: 0;
+    border-radius: 0;
   }
 }
 
