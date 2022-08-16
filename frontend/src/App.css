@@ -1,5 +1,5 @@
 html {
-    background-color: #e7e8ff;
+    background-color: #63beff;
 }
 
 body {
@@ -144,7 +144,8 @@ td a:visited {
 
 .container3 {
   /* padding: 10px; */
-  background: #e7e8ff;
+  /* background: #e7e8ff; */
+  background: #63beff;
 
 }
 
@@ -152,7 +153,6 @@ td a:visited {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /* background-color: #e7e8ff; */
   background-color: white;
   margin-top: -6px;
 }
@@ -273,7 +273,8 @@ td a:visited {
 
 .footer {
   text-align: center;
-  background-color: #e7e8ff;
+  /* background-color: #e7e8ff; */
+  background-color: #63beff;
   position:relative;
   margin-top: auto;
   bottom: 0;
