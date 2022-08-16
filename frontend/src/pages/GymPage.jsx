@@ -80,7 +80,7 @@ function GymPage() {
 
         </table>
           ) : (
-            <h3>You have no gyms.</h3>
+            <h3>No matching gyms found.</h3>
       )}
       </section>
     </>

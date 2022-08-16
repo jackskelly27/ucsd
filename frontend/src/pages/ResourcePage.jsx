@@ -86,7 +86,7 @@ function ResourcePage() {
 
         </table>
           ) : (
-            <h3>You have no digital resources.</h3>
+            <h3>No matching digital resources found.</h3>
       )}
       </section>
     </>

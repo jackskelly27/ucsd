@@ -86,7 +86,7 @@ function ActivityPage() {
 
         </table>
           ) : (
-            <h3>You have no activities.</h3>
+            <h3>No matching activities found.</h3>
       )}
       </section>
     </>

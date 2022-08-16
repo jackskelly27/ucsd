@@ -62,7 +62,7 @@ function FrontPage() {
         <ul className="openSans">
           <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/Sie%CC%81ntate-menos.-Mue%CC%81vete-ma%CC%81s..pdf" target="_blank" rel="noopener noreferrer"><em>…cuando se siente mucho durante el día</em></a></li>
           <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/09/Rx-for-health-staying-active-even-when-feeling-frail.pdf" target="_blank" rel="noopener noreferrer"><em>…cuando se sienta frágil</em></a></li>
-          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/Estar-activo-con-tu-hijo-pequeno.pdf" target="_blank" rel="noopener noreferrer"><em>…con un hijo pequeño</em></a></li>
+          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/Estar-activo-con-tu-hijo-pequeno.pdf" target="_blank" rel="noopener noreferrer"><em>…cuando con un hijo pequeño</em></a></li>
           <li><a href="https://www.exerciseismedicine.org/eim-in-action/health-care/resources/rx-for-health-series/" target="_blank" rel="noopener noreferrer"><em>…cuando tenga una condición médica</em></a></li>
           <li><a href="https://drive.google.com/file/d/1a40dex3BE3kiVxG5Wi6814FThKozJw8X/view" target="_blank" rel="noopener noreferrer"><em>…UC San Diego manual de actividades físicas</em></a></li>
         </ul>
