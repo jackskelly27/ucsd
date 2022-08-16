@@ -49,21 +49,21 @@ function FrontPage() {
         <div className="box3">
         <h3 className="sourceSansPro">Tips to stay active…</h3>
         <ul className="openSans">
-          <li><a href="https://exerciseismedicine.org/wp-content/uploads/2021/04/EIM_Rx-for-Health_Sit-Less-Move-More.pdf" target="_blank" rel="noopener noreferrer">when you sit a lot during your day</a></li>
-          <li><a href="https://www.exerciseismedicine.org/assets/page_documents/Rx%20for%20health%20-%20staying%20active%20even%20when%20feeling%20frail.pdf" target="_blank" rel="noopener noreferrer">when you feel frail</a></li>
-          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/EIM_Rx-for-Health_Being-Active-with-Your-Young-Child.pdf" target ="_blank" rel="noopener noreferrer">with your young child</a></li>
-          <li><a href="https://www.exerciseismedicine.org/eim-in-action/health-care/resources/rx-for-health-series/" target="_blank" rel="noopener noreferrer">when you have a medical condition</a></li>
-          <li><a href="https://drive.google.com/file/d/0Bx04Z0HzLIqBQm1abmdoaXJlQW1rQ1BRZ25od2FWNnQtbkdJ/view?resourcekey=0-6jwL6CjGrUd0kdCPHlfkVg" target="_blank" rel="noopener noreferrer">UC San Diego Physical Activity Manual</a></li>
+          <li><a href="https://exerciseismedicine.org/wp-content/uploads/2021/04/EIM_Rx-for-Health_Sit-Less-Move-More.pdf" target="_blank" rel="noopener noreferrer">…when you sit a lot during your day</a></li>
+          <li><a href="https://www.exerciseismedicine.org/assets/page_documents/Rx%20for%20health%20-%20staying%20active%20even%20when%20feeling%20frail.pdf" target="_blank" rel="noopener noreferrer">…when you feel frail</a></li>
+          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/EIM_Rx-for-Health_Being-Active-with-Your-Young-Child.pdf" target ="_blank" rel="noopener noreferrer">…with your young child</a></li>
+          <li><a href="https://www.exerciseismedicine.org/eim-in-action/health-care/resources/rx-for-health-series/" target="_blank" rel="noopener noreferrer">…when you have a medical condition</a></li>
+          <li><a href="https://drive.google.com/file/d/0Bx04Z0HzLIqBQm1abmdoaXJlQW1rQ1BRZ25od2FWNnQtbkdJ/view?resourcekey=0-6jwL6CjGrUd0kdCPHlfkVg" target="_blank" rel="noopener noreferrer">…UC San Diego Physical Activity Manual</a></li>
         </ul>
         </div>
         <div className='box3'>
         <h3 className="sourceSansPro"><em>Consejos de como mantenerse activo…</em></h3>
         <ul className="openSans">
-          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/Sie%CC%81ntate-menos.-Mue%CC%81vete-ma%CC%81s..pdf" target="_blank" rel="noopener noreferrer"><em>cuando se siente mucho durante el día</em></a></li>
-          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/09/Rx-for-health-staying-active-even-when-feeling-frail.pdf" target="_blank" rel="noopener noreferrer"><em>cuando se sienta frágil</em></a></li>
-          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/Estar-activo-con-tu-hijo-pequeno.pdf" target="_blank" rel="noopener noreferrer"><em>con un hijo pequeño</em></a></li>
-          <li><a href="https://www.exerciseismedicine.org/eim-in-action/health-care/resources/rx-for-health-series/" target="_blank" rel="noopener noreferrer"><em>cuando tenga una condición médica</em></a></li>
-          <li><a href="https://drive.google.com/file/d/1a40dex3BE3kiVxG5Wi6814FThKozJw8X/view" target="_blank" rel="noopener noreferrer"><em>UC San Diego manual de actividades físicas</em></a></li>
+          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/Sie%CC%81ntate-menos.-Mue%CC%81vete-ma%CC%81s..pdf" target="_blank" rel="noopener noreferrer"><em>…cuando se siente mucho durante el día</em></a></li>
+          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/09/Rx-for-health-staying-active-even-when-feeling-frail.pdf" target="_blank" rel="noopener noreferrer"><em>…cuando se sienta frágil</em></a></li>
+          <li><a href="https://www.exerciseismedicine.org/wp-content/uploads/2021/04/Estar-activo-con-tu-hijo-pequeno.pdf" target="_blank" rel="noopener noreferrer"><em>…con un hijo pequeño</em></a></li>
+          <li><a href="https://www.exerciseismedicine.org/eim-in-action/health-care/resources/rx-for-health-series/" target="_blank" rel="noopener noreferrer"><em>…cuando tenga una condición médica</em></a></li>
+          <li><a href="https://drive.google.com/file/d/1a40dex3BE3kiVxG5Wi6814FThKozJw8X/view" target="_blank" rel="noopener noreferrer"><em>…UC San Diego manual de actividades físicas</em></a></li>
         </ul>
         </div>
       </div> 
