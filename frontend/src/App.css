@@ -42,6 +42,12 @@ select option {
   background-color: rgb(215, 237, 255);
 }
 
+.align3mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .container2 h3 {
   display: flex;
   align-items: center;
@@ -494,6 +500,12 @@ td a:visited {
 .container6 {
   align-items: center;
   flex-direction: column;
+}
+
+.align3mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
 
