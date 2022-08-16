@@ -13,11 +13,11 @@ function FrontPage() {
     </div>
     <div className="container4 sourceSansPro">
       <div className="card2">
-        <p className="box1-2p">Please enjoy the free to low-cost resources collected below. Remember, you live in San Diego! Find your favorite local coastline, park, or urban space to get out and move your body.</p>
+        <p className="box1-2p">Please enjoy the <span class="green">free to low-cost</span> resources collected below.<br></br><br></br>Remember, you live in San Diego! Find your favorite local coastline, park, or urban space to get out and move your body.</p>
         <img src="Box1-resized.jpg" alt="Welcome" height="180"/>
       </div>  
       <div className="card2 right">
-        <p className="box1-2p">Over 65? <a href="http://tools.silversneakers.com" target="_blank" rel="noopener noreferrer" class="emphasized">You may be eligible for a free program, Silver Sneakers, click here to find out</a>.</p>
+        <p className="box1-2p"><span class="over65">Over 65?</span><br></br><br></br><a href="http://tools.silversneakers.com" target="_blank" rel="noopener noreferrer" class="emphasized">You may be eligible for a free program, Silver Sneakers, click here to find out</a>.</p>
         <img src="Box2-resized.jpg" alt="Silver Sneakers" height="180"/>
       </div>
     </div>

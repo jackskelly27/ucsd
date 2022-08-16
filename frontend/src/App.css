@@ -243,6 +243,10 @@ td a:visited {
   font-style: italic;
 }
 
+.green {
+  color: green;
+}
+
 
 .fa {
   padding: 10px;
@@ -332,6 +336,10 @@ td a:visited {
 
 .openSans {
   font-family: 'Open Sans', sans-serif;
+}
+
+.over65 {
+  font-size: 120%;
 }
 
 .phone {
